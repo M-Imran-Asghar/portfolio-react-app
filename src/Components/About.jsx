@@ -10,7 +10,7 @@ function About() {
           <div className="text-orange-700 text-4xl font-bold">
             {aboutData.title}
             <div>
-              <p className="text-white text-lg text-center mt-6 ">
+              <p className="text-white md:text-lg md:text-center mt-6 text-sm ">
                 {aboutData.description1} <br /> <br />
                 {aboutData.description2}             
                
@@ -20,7 +20,7 @@ function About() {
         </div>
         <div className="mt-20 relative">
           <img
-            className="h-auto mx-auto rounded-lg shadow-xl relative "
+            className="h-auto mx-auto rounded-lg shadow-xl relative hidden md:block "
             src={aboutData.aboutImage}
             alt="image"
            

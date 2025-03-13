@@ -10,6 +10,7 @@ function Landing() {
   const [isOpen, setIsOpen] = useState(false);
   const handelSideBar = () => {
     setIsOpen(!isOpen);
+    
   };
 
   const handleDownloadCv = () => {
@@ -19,18 +20,21 @@ function Landing() {
   };
 
   return (
-    <div className="flex h-screen">
-      <div className="bg-orange-700 relative items-center flex w-5/12 ">
+    <div className="grid md:grid-cols-2 h-screen ">
+      <div className="bg-orange-700 relative flex justify-center items-center pb-60 pr-44">
         <h1 className="w-fit h-fit top-10 absolute left-10 font-extrabold text-2xl">
           {headerData.name}
         </h1>
         {isOpen && <Sidebar handelSideBar={handelSideBar}  />}
+        <div className="">
         <img
-          className=" w-60 h-60  rounded-full border-8 border-black absolute"
-          style={{ right: "-6rem" }}
+          className=" w-60 h-60 rounded-full border-8 border-black absolute md:right-[-6rem]
+          "
+          
           src={headerData.image}
           alt="profileImage"
         />
+        </div>
         ;
         <div className="absolute bottom-6 flex right-16 gap-4">
           {socialData.github && (
@@ -45,25 +49,26 @@ function Landing() {
           )}
         </div>
       </div>
-      <div className="bg-zinc-800 flex items-center justify-center flex-col w-3/5">
+      <div className="bg-zinc-800 flex items-center justify-center flex-col ">
         <button
           onClick={handelSideBar}
           className="absolute right-20 top-10 text-3xl text-white"
         >
           <FaBars />
         </button>
+        <div className="flex flex-col justify-center items-center ">
         <h1 className="text-white text-lg font-bold">{headerData.title}</h1>
         <h1 className="text-2xl font-extrabold text-white">
           {headerData.name}
         </h1>
-        <p className="w-2/4 text-white">{headerData.discription}</p>
+        <p className="w-2/4  text-white">{headerData.discription}</p>
+        </div>
         <div>
           <Button
             onClick={handleDownloadCv}
             label="Download Cv"
             className="mt-6 p-1 text-lg bg-transparent border-2  text-orange-700 border-orange-700 hover:bg-orange-700 hover:text-black hover:border-black"
-          />
-         
+          />         
         </div>
       </div>
       

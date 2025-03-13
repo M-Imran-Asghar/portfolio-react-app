@@ -11,10 +11,10 @@ function Sidebar({ handelSideBar, scrollToContact }) {
     >
       <div className="flex justify-end">
         <button
-          onClick={handelSideBar}
+          
           className=" hover:cursor-pointer m-2 hover:text-white text-orange-700 text-4xl  p-1 rounded-xl "
         >
-          <IoClose />
+          <IoClose title="close btn" onClick={handelSideBar}/>
         </button>
       </div>
       
