@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaHtml5, FaCss3Alt,FaReact } from "react-icons/fa";
 import { RiJavascriptFill,RiTailwindCssFill } from "react-icons/ri"
 import { AnimateScreen } from 'animate-screen'
+import { SiNextdotjs, SiTypescript } from 'react-icons/si';
 
 
 function Skills() {
@@ -28,9 +29,17 @@ function Skills() {
               <RiJavascriptFill className='text-7xl'/>
               <p className='text-white'>JavaScript</p>
             </li>
+            <li className='flex flex-col justify-center items-center text-lg font-mono font-extrabold text-black bg-orange-700 border-black hover:bg-black hover:text-orange-700 hover:border-orange-700 m-2 border-2 p-4  rounded-2xl shadow-orange-300 shadow-sm duration-700 hover:scale-105 ease-in-out'>
+              <SiTypescript className='text-7xl'/>
+              <p className='text-white'>Typescript</p>
+            </li>
             <li className='flex flex-col justify-center items-center text-lg font-mono font-extrabold text-black bg-orange-700 border-black hover:bg-black hover:text-orange-700 hover:border-orange-700 m-2 border-2 p-4 rounded-2xl shadow-orange-300 shadow-sm duration-700 hover:scale-105 ease-in-out'>
               <FaReact className='text-7xl'/>
               <p className='text-white'>React Js</p>
+            </li>
+             <li className='flex flex-col justify-center items-center text-lg font-mono font-extrabold text-black bg-orange-700 border-black hover:bg-black hover:text-orange-700 hover:border-orange-700 m-2 border-2 p-4 rounded-2xl shadow-orange-300 shadow-sm duration-700 hover:scale-105 ease-in-out'>
+              <SiNextdotjs className='text-7xl'/>
+              <p className='text-white'>Next Js</p>
             </li>
             
         </ul>
